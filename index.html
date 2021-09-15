@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Przelicznik walut - JS</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/9a4546f921.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <br /><br />
+      <h1 class="container-h1">Przelicznik walut na PLN</h1>
+      <form id="myForm">
+        <br /><br />
+        <label class="label" for="Twoja waluta">
+          <p class="label-title">Twoja waluta</p>
+        </label>
+        <select class="form-control" id="base">
+          <option value="EUR">EUR<span id="EUR-API"></span></option>
+          <option value="USD">USD<span id="USD-API"></span></option>
+          <option value="CHF">CHF<span id="CHF-API"></span></option>
+        </select>
+        <br />
+        <div class="form-group">
+          <input
+            id="baseCurrency"
+            type="number"
+            class="form-control"
+            value="0"
+          />
+        </div>
+        <label for="Wybrana waluta">
+          <p class="label-title">Wybrana waluta</p>
+        </label>
+
+        <select class="form-control" id="target">
+          <option>PLN</option>
+        </select>
+        <br />
+        <div class="form-group">
+          <input
+            id="targetCurrency"
+            type="number"
+            class="form-control"
+            value="0"
+          />
+        </div>
+      </form>
+      <div></div>
+      <div class="container-btn">
+        <button id="btn-count" class="btn-count">Przelicz</button>
+        <button id="btn-reset" class="btn-reset">Reset</button>
+      </div>
+      <div class="count-output">
+        PLN:&nbsp;<span id="count-output">0</span>zł
+      </div>
+      <div id="count-output"></div>
+      <div class="container-flags">
+        <a
+          href="https://www.nbp.pl/home.aspx?f=/statystyka/kursy.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img
+            class="img-flag"
+            src="https://image.ceneostatic.pl/data/products/22367750/i-polska-flaga-90x150cm-poliester.jpg"
+            alt="PLN"
+        /></a>
+        <a
+          href="https://www.nbp.pl/Kursy/KursyC.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img
+            class="img-flag"
+            src="https://img.geonames.org/flags/x/us.gif"
+            alt="USD"
+        /></a>
+        <a
+          href="https://www.nbp.pl/Kursy/KursyC.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img
+            class="img-flag"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/1200px-Flag_of_Europe.svg.png"
+            alt="EUR"
+        /></a>
+        <a
+          href="https://www.nbp.pl/Kursy/KursyC.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img
+            class="img-flag"
+            src="https://thumbs.dreamstime.com/b/flaga-szwajcarii-realistyczna-wektorowa-ilustraci-obywatel-s-108169641.jpg"
+            alt="CHF"
+        /></a>
+      </div>
+    </div>
+
+    <footer>
+      <p>Created by Jaceks Słomian</p>
+      <div class="contact-links">
+        <a
+          href="https://www.linkedin.com/in/jacek-s%C5%82omian-759171b9/"
+          target="_blank"
+          class="btn contact-details"
+          ><i class="fab fa-facebook-square"></i> LinkedIn</a
+        >
+        <a
+          id="profile-link"
+          href="https://github.com/jaceksl1"
+          target="_blank"
+          class="btn contact-details"
+          ><i class="fab fa-github"></i> GitHub</a
+        >
+        <a href="mailto:j.k.slomian@gmail.com" class="btn contact-details"
+          ><i class="fas fa-at"></i> Send a mail</a
+        >
+        <a href="tel:691-247-642" class="btn contact-details"
+          ><i class="fas fa-mobile-alt"></i> Call me</a
+        >
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
